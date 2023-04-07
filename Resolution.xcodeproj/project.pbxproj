@@ -15,6 +15,7 @@
 		779E827E29DFAACA00E8D815 /* Resolution.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 779E827C29DFAACA00E8D815 /* Resolution.xcdatamodeld */; };
 		779E828029DFBB8600E8D815 /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779E827F29DFBB8600E8D815 /* AddPostView.swift */; };
 		779E828229DFD16E00E8D815 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779E828129DFD16E00E8D815 /* DetailView.swift */; };
+		779E828429E0434500E8D815 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 779E828329E0434500E8D815 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		779E827D29DFAACA00E8D815 /* Post.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Post.xcdatamodel; sourceTree = "<group>"; };
 		779E827F29DFBB8600E8D815 /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
 		779E828129DFD16E00E8D815 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		779E828329E0434500E8D815 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7764BFE629D81A9C00BCC9D6 /* ContentView.swift */,
 				779E828129DFD16E00E8D815 /* DetailView.swift */,
 				779E827F29DFBB8600E8D815 /* AddPostView.swift */,
+				779E828329E0434500E8D815 /* Colors.xcassets */,
 				7764BFE829D81A9D00BCC9D6 /* Assets.xcassets */,
 				7764BFED29D81A9D00BCC9D6 /* Persistence.swift */,
 				779E827C29DFAACA00E8D815 /* Resolution.xcdatamodeld */,
@@ -137,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779E828429E0434500E8D815 /* Colors.xcassets in Resources */,
 				7764BFEC29D81A9D00BCC9D6 /* Preview Assets.xcassets in Resources */,
 				7764BFE929D81A9D00BCC9D6 /* Assets.xcassets in Resources */,
 			);

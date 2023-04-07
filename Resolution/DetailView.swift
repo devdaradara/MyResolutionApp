@@ -19,6 +19,13 @@ struct DetailView: View {
 
     var body: some View {
         VStack {
+            
+            if let category = post.category {
+                Text(category)
+                    .font(.headline)
+                    .padding()
+            }
+            
             if let imageData = post.todayPhoto,
                let uiImage = UIImage(data: imageData) {
                 Image(uiImage: uiImage)

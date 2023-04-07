@@ -5,8 +5,6 @@
 //  Created by 류지예 on 2023/04/07.
 //
 
-import Foundation
-
 import SwiftUI
 import PhotosUI
 import CoreData
@@ -15,6 +13,10 @@ struct AddPostView: View {
     @State private var text: String = ""
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
+    @State private var selectedCategory = "학습"
+    
+    let categories = ["학습", "건강", "인간관계", "취미", "여행", "경제", "사회봉사", "도전"]
+    let cateogyColor = [Color("myRed"), Color("myOrange"), Color("myYellow"), Color("myGreen"), Color("mySky"), Color("myIndigo"), Color("myPurple"), Color("myPink")]
     
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode
@@ -22,6 +24,22 @@ struct AddPostView: View {
     var body: some View {
         VStack {
             Form {
+                Section(header: Text("카테고리")) {
+                    HStack {
+                        ZStack {
+                            Circle()
+                                .fill(cateogyColor[categories.firstIndex(of: selectedCategory) ?? 0])
+                                .frame(width: 20, height: 20)
+                            Picker("카테고리", selection: $selectedCategory) {
+                                ForEach(categories, id: \.self) { category in
+                                    Text(category)
+                                }
+                            }
+                            .pickerStyle(.menu)
+                        }
+                    }
+                }
+
                 Section {
                     PhotosPicker(
                         selection: $selectedItem,
@@ -56,7 +74,7 @@ struct AddPostView: View {
             Button("Post") {
                 let newPost = Post(context: viewContext)
                 newPost.todayResolution = text
-                
+                newPost.category = selectedCategory
                 if let selectedImageData = selectedImageData {
                     newPost.todayPhoto = selectedImageData
                 }
